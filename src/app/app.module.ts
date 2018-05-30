@@ -9,6 +9,13 @@ import { MessagesComponent } from './messages/messages.component';
 import {MessageService} from "./message.service";
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+<<<<<<< Updated upstream
+=======
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -17,6 +24,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
