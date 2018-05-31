@@ -32,7 +32,7 @@ import {MessageService} from './message.service';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
   ],
   providers: [
     HeroService,
