@@ -11,7 +11,8 @@ import { MessagesComponent }    from './messages/messages.component';
 import {HeroService} from './hero.service';
 import {MessageService} from './message.service';
 import {HttpClientModule} from '@angular/common/http';
-
+import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 
 
@@ -22,6 +23,9 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
 
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   declarations: [
     AppComponent,
