@@ -23,8 +23,9 @@ import {MessageService} from './message.service';
     HttpClientModule,
 
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, {dataEncapsulation: false}
     )
+
   ],
   declarations: [
     AppComponent,
