@@ -1,11 +1,13 @@
-<div *ngIf="hero">
+<div *ngIf="hero" class="container">
   <h2>{{ hero.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
   <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
+    <span>Name: </span>
+    <mdc-text-field [box]="true" label="Hero Number {{hero.id}}" [(ngModel)]="hero.name">
+      <mdc-icon trailing #demobox3icon>person</mdc-icon>
+    </mdc-text-field>
   </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="goBack()" mdc-button [primary]="true">go back</button>
+  <button (click)="save()" mdc-button [primary]="true">save</button>
 </div>
+
+

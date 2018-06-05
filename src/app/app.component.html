@@ -1,7 +1,40 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a><br/>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<mdc-app-bar [short]="true">
+  <mdc-app-bar-row>
+    <mdc-app-bar-section align="start">
+      <mdc-icon mdcAppBarNavIcon (click)="temporary.open()">menu</mdc-icon>
+      <mdc-app-bar-title>{{title}}</mdc-app-bar-title>
+      <mdc-app-bar-title><a mdc-button [primary]="true" routerLink="/dashboard">Dashboard</a></mdc-app-bar-title>
+      <mdc-app-bar-title><a mdc-button [primary]="true"  routerLink="/heroes">Heroes</a></mdc-app-bar-title>
+    </mdc-app-bar-section>
+    <mdc-app-bar-section align="end">
+      <mdc-icon mdcAppBarActionItem>file_download</mdc-icon>
+    </mdc-app-bar-section>
+  </mdc-app-bar-row>
+</mdc-app-bar>
+
+  <router-outlet></router-outlet>
+  <div>
+    <app-messages></app-messages>
+  </div>
+
+
+<mdc-drawer drawer='temporary' #temporary >
+  <mdc-drawer-header class="drawerHeader">
+    Tour of Heroes
+  </mdc-drawer-header>
+  <mdc-drawer-content class="listItem">
+    <mdc-list-group>
+      <mdc-list>
+        <mdc-list-item routerLink="/dashboard">
+          <mdc-icon mdc-list-item-graphic>tab</mdc-icon>
+          Dashboard
+        </mdc-list-item>
+        <mdc-list-item routerLink="/heroes">
+          <mdc-icon mdc-list-item-graphic>person</mdc-icon>
+          Heroes
+        </mdc-list-item>
+      </mdc-list>
+    </mdc-list-group>
+  </mdc-drawer-content>
+</mdc-drawer>
+

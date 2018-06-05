@@ -1,13 +1,18 @@
 <div id="search-component">
   <h4>Hero Search</h4>
 
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <mdc-text-field [outline]="true" label="search Hero" #searchBox (keyup)="search(searchBox.value)"></mdc-text-field>
 
-  <ul class="search-result">
-    <li *ngFor="let hero of heroes$ | async" >
-      <a routerLink="/detail/{{hero.id}}">
-        {{hero.name}}
-      </a>
-    </li>
-  </ul>
+  <!--<ul class="search-result">-->
+    <!--<li *ngFor="let hero of heroes$ | async" >-->
+      <!--<a routerLink="/detail/{{hero.id}}">-->
+        <!--{{hero.name}}-->
+      <!--</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <mdc-list [dense]="true">
+    <mdc-list-item *ngFor="let hero of heroes$ | async" class="search-result">
+      <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+    </mdc-list-item>
+  </mdc-list>
 </div>
