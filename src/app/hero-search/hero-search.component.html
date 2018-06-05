@@ -11,8 +11,10 @@
     <!--</li>-->
   <!--</ul>-->
   <mdc-list [dense]="true">
-    <mdc-list-item *ngFor="let hero of heroes$ | async" class="search-result">
-      <a routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+    <mdc-list-item *ngFor="let hero of heroes$ | async"
+                   class="search-result"
+                   routerLink="/detail/{{hero.id}}">
+      {{hero.name}}
     </mdc-list-item>
   </mdc-list>
 </div>
