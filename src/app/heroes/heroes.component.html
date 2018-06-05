@@ -1,11 +1,11 @@
 <div class="container">
   <h2>My Heroes</h2>
   <div>
-    <label>Hero name:
-      <input #heroName />
-    </label>
+    <mdc-text-field id="addField" [box]="true" #heroName label="Hero Name">
+      <mdc-icon trailing #demobox3icon>person</mdc-icon>
+    </mdc-text-field>
     <!-- (click) passes input value to add() and then clears the input -->
-    <button mdc-button [primary]="true" (click)="add(heroName.value); heroName.value=''">
+    <button class="add" mdc-button [primary]="true" (click)="add(heroName.value); heroName.value=''">
       add
     </button>
   </div>
@@ -20,5 +20,6 @@
     </li>
   </ul>
 </div>
+
 
 

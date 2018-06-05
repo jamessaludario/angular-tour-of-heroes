@@ -1,0 +1,19 @@
+div{
+  position: absolute;
+  left: 900px;
+  top: 110px;
+}
+
+.drawerHeader{
+  font-size: 1.7em;
+  padding-left: 10px;
+  background: #1565c0 url("./images/hero.jpeg");
+}
+
+mdc-list-item:hover{
+  background-color: #5793d8;
+}
+
+.listItem{
+  background-color: #d0fff5;
+}

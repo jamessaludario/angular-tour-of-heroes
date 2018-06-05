@@ -1,0 +1,25 @@
+.cards{
+  width: 200px;
+  height: 110px;
+  display: inline-block;
+  margin: 10px;
+  background-color: #4f8bbe;
+}
+.container{
+  padding: 100px 0 0 80px;
+  width: 50%;
+}
+
+.search{
+  position: absolute;
+  left: 600px;
+  top: 110px;
+}
+
+.heroName{
+  text-align: center;
+
+}
+h3{
+  padding-left: 12px;
+}

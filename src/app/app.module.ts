@@ -19,7 +19,7 @@ import { MdcButtonModule } from '@angular-mdc/web';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { AngularMdcModule } from './angular-mdc.module';
+import {AngularMdcModule} from './angular-mdc.module';
 
 
 @NgModule({
