@@ -18,19 +18,14 @@ input[text] {
 }
 
 button {
-  color: crimson;
   font-family: Cambria, Georgia;
   &.clear {
     font-family: Arial;
-    background-color: #eee;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
     cursor: hand;
-  }
-  &:hover {
-    background-color: #cfd8dc;
   }
   &:disabled {
     background-color: #eee;
@@ -41,4 +36,8 @@ button {
     color: #888;
     margin-bottom: 12px;
   }
+}
+
+span{
+  color: white;
 }

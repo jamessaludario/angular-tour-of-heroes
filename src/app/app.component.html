@@ -1,16 +1,31 @@
-<mdc-app-bar [short]="true">
-  <mdc-app-bar-row>
-    <mdc-app-bar-section align="start">
-      <mdc-icon mdcAppBarNavIcon (click)="temporary.open()">menu</mdc-icon>
-      <mdc-app-bar-title>{{title}}</mdc-app-bar-title>
-      <mdc-app-bar-title><a mdc-button [primary]="true" routerLink="/dashboard">Dashboard</a></mdc-app-bar-title>
-      <mdc-app-bar-title><a mdc-button [primary]="true"  routerLink="/heroes">Heroes</a></mdc-app-bar-title>
-    </mdc-app-bar-section>
-    <mdc-app-bar-section align="end">
-      <mdc-icon mdcAppBarActionItem>file_download</mdc-icon>
-    </mdc-app-bar-section>
-  </mdc-app-bar-row>
-</mdc-app-bar>
+<!--<mdc-app-bar [short]="true">-->
+  <!--<mdc-app-bar-row>-->
+    <!--<mdc-app-bar-section align="start">-->
+      <!--<mdc-icon mdcAppBarNavIcon (click)="temporary.open()">menu</mdc-icon>-->
+      <!--<mdc-app-bar-title>{{title}}</mdc-app-bar-title>-->
+      <!--<mdc-app-bar-title><a mdc-button [primary]="true" routerLink="/dashboard">Dashboard</a></mdc-app-bar-title>-->
+      <!--<mdc-app-bar-title><a mdc-button [primary]="true"  routerLink="/heroes">Heroes</a></mdc-app-bar-title>-->
+    <!--</mdc-app-bar-section>-->
+    <!--<mdc-app-bar-section align="end">-->
+      <!--<mdc-icon mdcAppBarActionItem>file_download</mdc-icon>-->
+    <!--</mdc-app-bar-section>-->
+  <!--</mdc-app-bar-row>-->
+<!--</mdc-app-bar>-->
+
+  <mdc-toolbar [fixed]="true">
+    <mdc-toolbar-row>
+      <mdc-toolbar-section [alignStart]="true">
+        <mdc-icon mdc-toolbar-menu-icon material-icon  (click)="temporary.open()">menu</mdc-icon>
+        <mdc-toolbar-title>{{title}}</mdc-toolbar-title>
+        <mdc-toolbar-title>
+          <a mdc-button [primary]="true" routerLink="/dashboard">Dashboard</a>
+        </mdc-toolbar-title>
+        <mdc-toolbar-title routerLink="/heroes">
+          <a mdc-button [primary]="true"  routerLink="/heroes">Heroes</a>
+        </mdc-toolbar-title>
+      </mdc-toolbar-section>
+    </mdc-toolbar-row>
+  </mdc-toolbar>
 
   <router-outlet></router-outlet>
   <div>
@@ -37,4 +52,6 @@
     </mdc-list-group>
   </mdc-drawer-content>
 </mdc-drawer>
+
+
 
