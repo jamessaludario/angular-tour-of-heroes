@@ -14,19 +14,11 @@ import { MessagesComponent }    from './messages/messages.component';
 import {HeroService} from './hero.service';
 import {MessageService} from './message.service';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { MdcButtonModule } from '@angular-mdc/web';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import {AngularMdcModule} from './angular-mdc.module';
 
 
 @NgModule({
   imports: [
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
-    ModalModule.forRoot(),
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -38,19 +30,8 @@ import {AngularMdcModule} from './angular-mdc.module';
 
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MdcButtonModule,
     AngularMdcModule
 
-  ],
-  exports: [
-    BsDropdownModule,
-    TooltipModule,
-    ModalModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MdcButtonModule
   ],
   declarations: [
     AppComponent,
