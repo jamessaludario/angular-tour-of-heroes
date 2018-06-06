@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 
@@ -14,16 +14,27 @@ import { HeroService } from '../hero.service';
   templateUrl: './hero-search.component.html',
   styleUrls: [ './hero-search.component.scss' ]
 })
+
 export class HeroSearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
 
   constructor(private heroService: HeroService) {}
 
+  @ViewChild('heroForm') form: any;
+
+
   // Push a search term into the observable stream.
   search(term: string): void {
     this.searchTerms.next(term);
   }
+
+  callAll(term: string, id: number): void {
+    this.form.nativeElement.reset();
+    this.search("");
+  }
+
+
 
   ngOnInit(): void {
     this.heroes$ = this.searchTerms.pipe(

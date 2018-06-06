@@ -1,20 +1,20 @@
 <div id="search-component">
-  <h4>Hero Search</h4>
+  <form #heroForm>
+    <mdc-text-field [box]="true"
+                    label="Search Hero"
+                    #searchBox
+                    (keyup)="search(searchBox.value)"
+                    id="searchHero">
 
-  <mdc-text-field [outline]="true" label="Search Hero" #searchBox (keyup)="search(searchBox.value)"></mdc-text-field>
+    </mdc-text-field>
+    <mdc-list [dense]="true" *ngIf="heroes$" id="searchList">
+      <mdc-list-item *ngFor="let hero of heroes$ | async"
+                     class="search-result"
+                     routerLink="/detail/{{hero.id}}"
+                     (click)="callAll(searchBox.value, hero.id)">
+        {{hero.name}}
+      </mdc-list-item>
+    </mdc-list>
+  </form>
 
-  <!--<ul class="search-result">-->
-    <!--<li *ngFor="let hero of heroes$ | async" >-->
-      <!--<a routerLink="/detail/{{hero.id}}">-->
-        <!--{{hero.name}}-->
-      <!--</a>-->
-    <!--</li>-->
-  <!--</ul>-->
-  <mdc-list [dense]="true">
-    <mdc-list-item *ngFor="let hero of heroes$ | async"
-                   class="search-result"
-                   routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
-    </mdc-list-item>
-  </mdc-list>
 </div>

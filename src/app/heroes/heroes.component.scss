@@ -5,6 +5,9 @@
   list-style-type: none;
   padding: 0;
   width: 15em;
+  overflow-y: scroll;
+  height: 310px;
+  width: 270px;
   li {
     position: relative;
     cursor: pointer;
@@ -69,8 +72,10 @@ button {
   }
 }
 
-.container{
-  padding: 50px 0 0 50px;
+#container{
+  position: absolute;
+  top: 139px;
+  left: 100px;
 }
 
 .add{

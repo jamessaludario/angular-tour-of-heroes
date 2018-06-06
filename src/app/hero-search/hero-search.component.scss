@@ -26,7 +26,10 @@
   height: 20px;
 }
 
-ul.search-result {
-  margin-top: 0;
-  padding-left: 0;
+#searchHero{
+  margin: 0;
+}
+
+#searchList{
+  position: absolute;
 }
